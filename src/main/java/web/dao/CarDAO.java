@@ -23,10 +23,6 @@ public class CarDAO {
         if (amount >= cars.size()) {
             return cars;
         }
-        List<Car> requiredAmount = new ArrayList<>();
-        for (int i = 0; i < amount; i++) {
-            requiredAmount.add(cars.get(i));
-        }
-        return requiredAmount;
+        return cars.subList(0, amount);
     }
 }
